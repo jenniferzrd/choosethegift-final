@@ -1,0 +1,30 @@
+.container-fluid {
+    height: 74vh; 
+}
+
+.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0.5; /* Firefox */
+    font-size: 10px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0.5
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0.5
+}
+
+input:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0; /* Firefox */
+}
+
+.text-size-small {
+    font-size: 8px;
+}

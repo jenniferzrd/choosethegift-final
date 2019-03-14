@@ -1,0 +1,73 @@
+<div class="container-title-page background-header d-flex align-items-center justify-content-center">
+    <span class="title-page font-lato"> GALLERIE </span>
+
+    <div class="pleft">
+      <a routerLink="/createidea">
+        <!-- <i class="fa fa-2x fa-plus-circle text-color-pink"></i> -->
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 439 439" width="439" height="439">
+          <g id="bg">
+            <path id="Shape 6" class="shp0" d="M219.5,430c-116.41,0 -210.5,-94.09 -210.5,-210.5c0,-116.41 94.09,-210.5 210.5,-210.5c116.41,0 210.5,94.09 210.5,210.5c0,116.41 -94.09,210.5 -210.5,210.5zM341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+            />
+          </g>
+          <g id="plus">
+            <path id="Shape 6" class="shp1" d="M341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+<div class="container-fluid">
+  <div class="row d-flex justify-content-around mbottom">
+
+    <div *ngFor="let idea of ideas" class="col-6 padding-between-idea mtop">
+      <!-- <div *ngFor="let idea of storeItems" class="col-6 padding-between-idea mtop"> -->
+      <div class="card">
+        <div card-header class="header">
+          <div class="text-right pright">
+            <button type="button" class="btn btn-edit paddingzero" (click)="edit(idea)">
+              <a routerLink="/createidea">
+                <i class="fa fa-edit"></i>
+              </a>
+            </button>
+            <button type="button" class="btn btn-delete text-color-red paddingzero" (click)="delete(idea)">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="img-card" [ngStyle]="{ 'background-image': 'url(' + idea.img + ')'}"></div>
+
+        <div class="card-body ptop-correction">
+          <p class="text-card font-lato text-color-grey text-bold"> {{ idea.title }} </p>
+          <p class="font-oxy text-color-grey pl15px"> {{ idea.comment }} </p>
+          <div class="d-flex">
+            <div class="col d-flex align-items-center">
+
+              <button type="button" class="btn btn-like" (click)="like(idea, $event)">
+                <i class="fa fa-heart"></i>
+              </button>
+
+              <!-- {{ idea.jaime }} -->
+              <button class="btn-check" *ngIf="idea.jaime === true" (click)="selected(idea)">
+                <i class="fa fa-check-circle"></i>
+              </button>
+
+              <!-- <button class="btn-check" *ngIf="idea.jaime === true" (click)="addIdeaInCart(idea.id)">
+            <i class="fa fa-check-circle"></i>
+             </button> -->
+
+            </div>
+            <div class="col text-right">
+              <span class="card-title text-color-darkpurple text-color-lightgrey text-size-price-idea">
+                {{ idea.price }} €
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

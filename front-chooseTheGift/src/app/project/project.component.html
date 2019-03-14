@@ -1,0 +1,97 @@
+<!-- MOCK -->
+<!--   
+<div class="container">
+  <div class="container-title-page">
+    <div class="row">
+      <div class="container-fluid d-flex align-items-center">
+      <div class="col-8 text-right title-page font-lato">
+        PROJETS
+      </div>
+      <div class="col-4 text-left">
+        <a routerLink="/createproject">
+          <i class="fa fa-2x fa-plus-circle"></i>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+ 
+
+  <div class="border-container">
+    <div class="row border-row">
+      <div class="col-6">
+        <span class="project-title font-oxy"> Titre</span>
+      </div>
+      <div class="col-6 text-right font-price font-oxy">
+        <span> prix €</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-container">
+    <div class="row border-row">
+      <div class="col-6">
+        <span class="project-title"> Titre</span>
+      </div>
+      <div class="col-6 text-right">
+        <span> prix €</span>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+<div class="container-title-page d-flex align-items-center justify-content-center background-header">
+    <span class="title-page font-lato"> PROJETS </span>
+    <div class="pleft">
+      <a routerLink="/createproject">
+        <div class="tada animated loop">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 439 439" width="439" height="439">
+            <g id="bg">
+              <path id="Shape 6" class="shp0" d="M219.5,430c-116.41,0 -210.5,-94.09 -210.5,-210.5c0,-116.41 94.09,-210.5 210.5,-210.5c116.41,0 210.5,94.09 210.5,210.5c0,116.41 -94.09,210.5 -210.5,210.5zM341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+              />
+            </g>
+            <g id="plus">
+              <path id="Shape 6" class="shp1" d="M341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+              />
+            </g>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center container-user-money font-oxy">
+    <span>La somme récoltée est de</span>
+    <span> {{ total }} &#x20AC; </span>
+  </div>
+
+<div class="container">
+  <div *ngFor="let project of projects" class="border-container">
+    <div class="row border-row align-items-center">
+      <div class="col-6">
+        <span class="project-title font-oxy">
+          <a routerLink="/ideas" class="text-color-darkpurple">
+            {{project.title}}
+          </a>
+        </span>
+        <span style="display: block"> {{ project.comment}} </span>
+      </div>
+
+      <div class="col text-right font-price font-oxy">
+        <span> {{project.totalmoney}} &#x20AC;</span>
+      </div>
+
+      <div class="col-1 d-flex align-items-center">
+        <button type="button" class="btn btn-edit paddingzero" (click)="edit(project)">
+          <a routerLink="/createproject">
+            <i class="fa fa-edit"></i>
+          </a>
+        </button>
+        <button type="button" class="btn btn-delete paddingzero text-color-red" (click)="delete(project)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

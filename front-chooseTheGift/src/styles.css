@@ -1,0 +1,281 @@
+/* You can add global styles to this file, and also import other style files */
+/* .bg {
+    background: #575fcf;
+    background: -moz-linear-gradient(-45deg, #575fcf 0%, #81ecec 60%);
+    background: -webkit-linear-gradient(-45deg, #575fcf 0%,#81ecec 60%); 
+    background: linear-gradient(135deg, #575fcf 0%,#81ecec 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575fcf', endColorstr='#81ecec',GradientType=1 );
+    height: 100vh;
+} */
+
+/* .bg {
+    height: 100vh;
+    background-color: #FFFFE5;
+} */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* COULEURS */
+
+.bg-white {
+    background: white;
+}
+
+.background-header {
+    /* background: #3cf8d0; */
+    /* background: #0cebeb; 
+    background: -webkit-linear-gradient(to left, #29ffc6, #20e3b2 ); 
+    background: linear-gradient(to left, #29ffc6, #20e3b2 ); */
+    
+background-color: #27f6bf;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%2327f6bf' cx='50' cy='0' r='50'/%3E%3Cg fill='%2326f1bc' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2325edb8' cx='50' cy='100' r='50'/%3E%3Cg fill='%2324e9b5' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%2323e4b2' cx='50' cy='200' r='50'/%3E%3Cg fill='%2322e0ae' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%2321dbab' cx='50' cy='300' r='50'/%3E%3Cg fill='%2320d7a8' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%231fd2a4' cx='50' cy='400' r='50'/%3E%3Cg fill='%231ecea1' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%231dca9e' cx='50' cy='500' r='50'/%3E%3Cg fill='%231cc59a' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%231cc197' cx='50' cy='600' r='50'/%3E%3Cg fill='%231bbd94' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%231ab890' cx='50' cy='700' r='50'/%3E%3Cg fill='%2319b48d' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2319b08a' cx='50' cy='800' r='50'/%3E%3Cg fill='%2318ac87' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%2317a783' cx='50' cy='900' r='50'/%3E%3Cg fill='%2317a380' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23169f7d' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain;
+
+}
+
+.text-color-darkpurple {
+    color: #28263F;
+}
+
+.text-color-pastelpink {
+    color:#fab1a0;
+}
+
+.text-color-pastellemon {
+    color: #ffeaa7;
+}
+
+.text-color-orange {
+    color: #ffa801;
+}
+
+.text-color-yellow {
+    color: #fffc0d;
+}
+.text-color-red {
+    color:#db6b7b;
+}
+
+/* #f57665 variante rouge
+ffcd3c variante orange  */
+
+.text-color-blue {
+    color: #34ace0;
+}
+
+.text-color-flashturquoise {
+    color: #81ecec;
+}
+
+.text-color-pink {
+    color: #fa2859 ;
+}
+
+.text-color-lightgrey {
+    color: #aeaba3;
+}
+
+.text-color-grey {
+    color: #4a4742;
+}
+
+.text-color-white {
+    color:white;
+}
+.text-bold {
+    font-weight: bold;
+}
+
+/* BUTTONS */
+
+.btn-modal, .btn-like, .btn-edit, .btn-delete, .btn-check {
+    background: none;
+}
+
+.btn-edit {
+    opacity: 0.2;
+    padding: 2px;
+}
+.btn-edit:hover {
+    opacity: 1;
+}
+
+.btn-delete {
+    opacity: 0.2;
+    padding: 2px; 
+}
+.btn-delete:hover {
+    opacity: 1;
+}
+
+.btn-like:hover {
+    color:#ffeaa7 !important;
+}
+
+.btn-check {
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: #81ecec;
+    border: none;
+}
+.btn-check:hover {
+    color: #2abe25;
+}
+
+.btn-red {
+    background: #fa2859;
+}
+
+.btn-orange {
+    background: #ffa801;
+}
+
+.btn-return {
+    background:none;
+    border: 1px solid #27f6bf !important;
+    border-radius: 10px;
+    color: #27f6bf;
+}
+
+.btn-return:hover{
+    cursor: pointer;
+}
+
+.btn-login {
+    background:#27f6bf !important;
+    color: white !important;
+}
+
+.btn-signin {
+    background:none !important;
+    border: 1px solid white !important;
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+/* FONTS */
+
+.font-oxy {
+    font-family: 'Oxygen', sans-serif;
+}
+
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.title-page {
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+}
+
+.title-page-medium {
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+}
+
+.title-page-short {
+    font-size: 15px;
+    /* color:#28263F; */
+    font-weight: bold;
+}
+
+/* FORMS */
+
+.form-control {
+    border-radius: 0px !important;
+    font-size: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.message {
+    color:red;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.bg-pattern-party {
+    background: url(./assets/images/pattern.svg);
+}
+
+/* SVG ICON */
+
+.shp0 { fill: #fa2859 } 
+.shp1 { fill: white} 
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* CONTAINER HEADER */
+
+.container-title-page {
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px solid lightgray;
+}
+
+.container-title-page-short {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid lightgray;
+}
+
+.container-title-page-medium {
+    padding: 30px 0px 30px 0px;
+}
+
+/* MARGIN PADDING */
+
+.container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.horizontal-center {
+    margin: 0 auto !important;
+}
+
+.mbottom {
+    margin-bottom: 50px;
+}
+
+.mleft {
+    margin-left: 17px;
+}
+
+.padding-top-form {
+    padding-top: 30px;
+}
+
+.padding-top-form-element {
+    padding-top: 10px;
+}
+
+.padding-top-zero {
+    padding-top: 0 !important;
+}
+
+.paddingzero {
+    padding: 0 !important;
+}
+
+.marginzero {
+    margin: 0 !important;
+}
+
+/* AUTRES */
+
+a {
+    text-decoration: none !important;
+}

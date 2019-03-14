@@ -1,0 +1,29 @@
+.height {
+    height: 74vh; 
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0.5; /* Firefox */
+    font-size: 10px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0.5
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0.5
+}
+
+input:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0; /* Firefox */
+}
+
+form {
+    padding-top:20px;
+}
+
+.message {
+    color: red;
+    text-align: center
+}

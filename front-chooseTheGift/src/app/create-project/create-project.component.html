@@ -1,0 +1,51 @@
+<!-- HEADER -->
+<div class="container-title-page-medium text-center background-header">
+  <span class="title-page-medium">
+    <a routerLink="/project" class="text-color-white">
+      Créer un projet
+    </a>
+  </span>
+</div>
+<!-- HEADER -->
+
+<!-- BODY -->
+<div class="container-fluid bg-pattern-party d-flex align-items-center justify-content-center">
+  <div class="container">
+    <form class="form-horizontal main-form">
+      <div class="form-group">
+        <label class="control-label col-sm-2 font-oxy" for="title">
+          <span class="required">*</span>
+          Titre du projet
+        </label>
+        <div class="col-12">
+          <input type="text" class="form-control" name="title" id="title" [(ngModel)]="project.title" placeholder="Saisissez un titre"
+            required>
+        </div>
+      </div>
+
+      <div class="form-group padding-top-form-element">
+        <label class="control-label col-sm-2 font-oxy" for="totalmoney">
+          <span class="required">*</span>
+          Cagnotte esperée
+        </label>
+
+        <div class="col-12">
+          <input type="text" class="form-control" name="totalmoney" id="totalmoney" [(ngModel)]="project.totalmoney" placeholder="Saisissez un chiffre"
+            required>
+        </div>
+      </div>
+
+      <span class="message d-flex justify-content-center">{{ message }}</span>
+
+      <div class="form-group">
+        <div class="row d-flex justify-content-center">
+          <button type="submit" (click)="return()" class="col-5 btn btn-return">Retour</button>
+          <button type="submit" (click)="saveOrUpdateProject()" class="col-5 mleft btn btn-login">Valider</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+<!-- BODY -->

@@ -1,0 +1,49 @@
+<div class="container-fluid delete-p-left-right">
+  <div class="container-title-page d-flex align-items-center justify-content-center background-header">
+
+    <span class="title-page font-lato"> PARTICIPANTS </span>
+    <div class="pleft">
+      <a routerLink="/createusers">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 439 439" width="439" height="439">
+          <g id="bg">
+            <path id="Shape 6" class="shp0" d="M219.5,430c-116.41,0 -210.5,-94.09 -210.5,-210.5c0,-116.41 94.09,-210.5 210.5,-210.5c116.41,0 210.5,94.09 210.5,210.5c0,116.41 -94.09,210.5 -210.5,210.5zM341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+            />
+          </g>
+          <g id="plus">
+            <path id="Shape 6" class="shp1" d="M341.91,188.57c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-75.64v-75.93c0,-4.87 -1.7,-9 -5.09,-12.41c-3.39,-3.41 -7.52,-5.11 -12.36,-5.11h-34.91c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v75.93h-75.64c-4.85,0 -8.97,1.71 -12.36,5.11c-3.39,3.41 -5.09,7.55 -5.09,12.41v35.05c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h75.64v75.93c0,4.87 1.7,9.01 5.09,12.41c3.39,3.41 7.51,5.11 12.36,5.11h34.91c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-75.93h75.64c4.85,0 8.97,-1.7 12.36,-5.11c3.39,-3.41 5.09,-7.54 5.09,-12.41v-35.05c0,-4.87 -1.7,-9 -5.09,-12.41z"
+            />
+          </g>
+        </svg>
+        </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let user of users" class="col-12">
+      <div class="row d-flex justify-content-center align-items-center mtop">
+        
+        <div class="col-3">
+          <i class="fa fa-3x fa-user-circle"></i>
+        </div>
+
+        <div class="col-8">
+          <div class="text-right">
+            <button type="button" class="btn btn-edit" (click)="edit(user)">
+              <a routerLink="/createusers">
+                <i class="fa fa-edit"></i>
+              </a>
+            </button>
+            <button type="button" class="btn btn-delete text-color-red" (click)="delete(user)">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+          <div class="col">
+            <p class="font-lato">{{user.name}} {{user.username}}</p>
+            <p>{{user.money}} €</p>
+          </div>
+        </div>
+      </div>
+    <hr>
+    </div>
+  </div>
+</div>

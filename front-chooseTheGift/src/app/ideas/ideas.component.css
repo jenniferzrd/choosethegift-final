@@ -1,0 +1,113 @@
+.card {
+    border: none;
+    border : 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.card-title {
+    margin-bottom: 0;
+}
+
+.imgIdea {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-modal-idea {
+    font-size: 30px;
+    background-color: darkgrey;
+    margin-bottom: 10px;
+}
+
+.price-and-like {
+    margin-top: 20px;
+}
+
+/* COLORS */
+
+.active {
+    color: red;
+}
+.inactive {
+    color: black;
+}
+
+.text-card {
+    padding-top: 5px;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.text-size-price-idea {
+    font-size: 16px;
+}
+
+/* BUTTON */
+
+.btn-like {
+    padding: 0;
+    margin: 0;
+    color:#fab1a0;
+}
+
+.fa-plus-circle {
+    padding-left: 10px; 
+    font-size: 40px;
+}
+
+.fa-check-circle {
+    padding-left: 10px;
+}
+
+/* CORRECTION POSITION  */
+
+.mtop {
+    margin-top: 20px;
+}
+.mbottom {
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.marginb-btnedit-btndelete {
+    margin-bottom: 20px;
+}
+
+.padding-between-idea:nth-child(2n+1) {
+    /* padding-left: 0px; */
+    padding-right:4px !important;
+}
+
+.padding-between-idea:nth-child(2n) {
+    padding-left: 4px !important;
+    /* padding-right: 0px; */
+}
+
+.header div :nth-child(even) {
+    padding-right: 30px !important;
+}
+
+.ptop-correction {
+    padding-top: 0;
+}
+
+.card-body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pl15px {
+    padding-left: 15px;
+}
+
+.img-card {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.pleft {
+    padding-left: 17px;
+}

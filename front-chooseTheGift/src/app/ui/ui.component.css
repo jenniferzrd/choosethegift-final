@@ -1,0 +1,30 @@
+.nav-bottom {
+    background-color:rgba(255, 255, 255, 1);
+}
+
+.ptpb10px {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.active > .icon{
+    fill: #f57665
+}
+
+.phone {
+    color: grey;
+    background: black;
+}
+
+.phone-logo {
+    padding-right: 10px;
+}
+
+.project-name {
+    padding-left: 10px;
+}

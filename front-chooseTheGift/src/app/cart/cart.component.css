@@ -1,0 +1,45 @@
+.border-validate-idea {
+    border: 1px solid #efefef;
+    padding: 20px;
+}
+
+.img-cart {
+    background-position: center;
+    background-size: cover;
+    height: 80px;
+}
+
+.ptop {
+    padding-top: 20px;
+}
+
+.pright {
+    padding-right: 10px;
+}
+
+.container-message {
+    border: 1px solid #ffa801;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.btn-validate {
+    background: #25edb8;
+}
+
+.btn-return {
+    border: 1px solid #25edb8;
+    background: none;
+    color: #25edb8;
+}
+
+.container-fluid {
+    height: 74vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.bg-white {
+    background: white;
+}

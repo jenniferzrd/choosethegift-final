@@ -1,0 +1,11 @@
+/* .bg {
+    background: #a29bfe;
+background: -moz-linear-gradient(-45deg, #a29bfe 0%, #81ecec 60%);
+background: -webkit-linear-gradient(-45deg, #a29bfe 0%,#81ecec 60%); 
+background: linear-gradient(135deg, #a29bfe 0%,#81ecec 60%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a29bfe', endColorstr='#81ecec',GradientType=1 ); 
+} */
+
+* {
+    overflow-x: hidden;
+}

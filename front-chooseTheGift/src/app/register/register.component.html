@@ -1,0 +1,61 @@
+<div class="container-title-page text-center background-header">
+  <span class="title-page">
+    Inscription
+  </span>
+</div>
+
+<div class="bg-pattern-party d-flex align-items-center justify-content-center">
+ 
+    <div *ngIf="isSignedUp; else signupForm">
+      Votre inscription a été prise en compte, connectez vous !
+    </div>
+
+    <ng-template #signupForm>
+      <div class="container height">
+        <div class="row d-flex justify-content-center">
+          <form name="form" class="form-horizontal col-12" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="name" class="font-oxy">Votre nom</label>
+              <input type="text" class="form-control" name="name" [(ngModel)]="form.name" #name="ngModel" required />
+              <div *ngIf="f.submitted && name.invalid">
+                <div *ngIf="name.errors.required" class="message">Un nom est requis</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="username" class="font-oxy">Votre pseudo</label>
+              <input type="text" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required />
+              <div *ngIf="f.submitted && username.invalid">
+              <span *ngIf="username.errors.required" class="message">Un pseudo est requis</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="font-oxy">Email</label>
+              <input type="text" class="form-control" name="email" [(ngModel)]="form.email" #email="ngModel" required email />
+              <div *ngIf="f.submitted && email.invalid">
+                <span *ngIf="email.errors.required" class="message">Un email est requis</span>
+                <span *ngIf="email.errors.email" class="message">Votre email doit être une adresse valide</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="font-oxy">Mot de passe</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel" required minlength="6"
+              />
+              <div *ngIf="f.submitted && password.invalid">
+                <span *ngIf="password.errors.required" class="message">Un mot de passe est requis</span>
+                <span *ngIf="password.errors.minlength">Le mot de passe doit faire minimum 6 caractères</span>
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <button (click)="return()" class="col-5 btn btn-return">Retour</button>
+              <button class="col-6 mleft btn btn-login">Inscription</button>
+              <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-warning">
+                L'inscription a échouée !
+                <br/> {{errorMessage}}
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </ng-template>
+ 
+</div>
